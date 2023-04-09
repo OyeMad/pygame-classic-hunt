@@ -99,6 +99,9 @@ class Duck(object):
         x2, y2 = pos
         frameX, frameY = FRAME_SIZE
 
+        frameX = frameX - (frameX/3)
+        frameY = frameY - (frameY/3)
+
         # If the duck is already dead or flying off, they can't be shot
         if self.flyOff or self.isDead:
             return False
